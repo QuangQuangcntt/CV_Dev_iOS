@@ -34,5 +34,6 @@ struct Contact_View: View {
         .frame(width: WV, alignment: .center)// not set height: -> Auto height
         .navigationTitle("")
         .navigationBarHidden(true)
+        .background(Color(hex: 0xFCFAF7))
     }
 }
