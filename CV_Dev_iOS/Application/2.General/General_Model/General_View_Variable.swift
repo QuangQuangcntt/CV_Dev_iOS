@@ -16,13 +16,12 @@ struct General_View {
     //tabbar state
     @ObservedObject var selectType: tabbarState
     
-    struct dataExperience {
+    struct dataExperience: Hashable {
         var time: String = ""
-        var title: String = ""
-        var Skill: String = ""
+        var company: String = ""
+        var position: String = ""
         var Project: String = ""
-        var purpose: String = ""
-        var tech: [String] = []
+        var description: String = ""
     }
     
     @State var arrExperience: [dataExperience] = []

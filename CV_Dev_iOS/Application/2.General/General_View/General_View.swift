@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-extension General_View {
-    
-    
-    
+extension General_View: View {
+
     var body: some View {
        
         ScrollView(.vertical, showsIndicators: false) {
@@ -18,77 +16,8 @@ extension General_View {
            
             VStack(alignment: .center, spacing: 0){
                 
-                HStack(alignment: .center, spacing: 16){
-                    
-                    VStack(alignment: .center, spacing: 0){
-                        
-                        Image("CV_AVATAR")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 100, height: 120, alignment: .center)
-                        
-                        Spacer()
-                    }
-                   
-                    
-                    Spacer()
-                    
-                    VStack(alignment: .leading, spacing: 32){
-                        
-                        Text("TRAN MINH QUANG")
-                            .foregroundColor(Color(hex: 0x6F4B51))
-                            .font(.custom(Font().Bold(), size: Font().Size30()))
-                        
-                        Text("Mobile Developer")
-                            .foregroundColor(Color(hex: 0xEB7B77))
-                            .font(.custom(Font().Bold(), size: Font().Size24()))
-                        
-                        //Basic infor
-                        
-                        HStack(alignment: .center, spacing: 16){
-                            
-                    
-
-                            VStack(alignment: .leading, spacing: 16) {
-
-                                Text("Birthday")
-                                    .foregroundColor(Color(hex: 0xEB7B77))
-                                    .font(.custom(Font().Bold(), size: Font().Size16()))
-                                
-                                Text("Nationality")
-                                    .foregroundColor(Color(hex: 0xEB7B77))
-                                    .font(.custom(Font().Bold(), size: Font().Size16()))
-                                
-                                Text("Status")
-                                    .foregroundColor(Color(hex: 0xEB7B77))
-                                    .font(.custom(Font().Bold(), size: Font().Size16()))
-
-                            }.frame(width: 90, alignment: .leading)
-                            
-                            
-
-                            VStack(alignment: .leading, spacing: 16) {
-
-                                Text("10 .10 .1998")
-                                    .foregroundColor(Color(hex: 0x6F4B51))
-                                    .font(.custom(Font().Bold(), size: Font().Size16()))
-
-                                Text("Viet Nam")
-                                    .foregroundColor(Color(hex: 0x6F4B51))
-                                    .font(.custom(Font().Bold(), size: Font().Size16()))
-
-                                Text("Single")
-                                    .foregroundColor(Color(hex: 0x6F4B51))
-                                    .font(.custom(Font().Bold(), size: Font().Size16()))
-
-                            }
-                        }
-                        
-                    }
-                    
-                    Spacer()
-                    
-                }.padding(.all, 16)
+                //MARK: - HEADER
+                General_View_Header()
                 
                 //MARK: - EXPERIENCE
                 
@@ -102,18 +31,147 @@ extension General_View {
                     
                 }.padding(.all, 16)
                 
-                //MARK: - EDUCATION
-                
-                HStack(alignment: .center, spacing: 16){
-                 
-                    Text("Education")
-                        .foregroundColor(Color(hex: 0x6F4B51))
-                        .font(.custom(Font().Bold(), size: Font().Size24()))
+                VStack(alignment: .leading, spacing: 0){
                     
-                    Spacer()
+                    Rectangle()
+                        .foregroundColor(Color(hex: 0x707070))
+                        .frame(width: 2, height: 32, alignment: .center)
+                        .padding(.leading, 5)
+                    
+                    ForEach(arrExperience, id: \.self){ index in
+                        
+                        HStack(alignment: .center, spacing: 16){
+                            
+                            Circle()
+                                .foregroundColor(Color(hex: 0x9A293E))
+                                .frame(width: 12, height: 12, alignment: .center)
+                            
+                            Text(index.time)
+                                .foregroundColor(Color(hex: 0x6F4B51))
+                                .font(.custom(Font().Bold(), size: Font().Size16()))
+                            
+                            Spacer()
+                            
+                        }.padding(.vertical, 4)
+                        
+                        
+                        HStack(alignment: .center, spacing: 16){
+                            
+                            Rectangle()
+                                .foregroundColor(Color(hex: 0x707070))
+                                .frame(width: 2, alignment: .center)
+                            
+                            VStack(alignment: .leading, spacing: 28){
+                                
+                                Spacer()
+                                    .frame(height: 4, alignment: .center)
+                                
+                                VStack(alignment: .leading, spacing: 8){
+                                    
+                                    Text("Company")
+                                        .foregroundColor(Color(hex: 0xEB7B77))
+                                        .font(.custom(Font().Bold(), size: Font().Size13()))
+                                    
+                                    Text(index.company)
+                                        .foregroundColor(Color(hex: 0x6F4B51))
+                                        .font(.custom(Font().Bold(), size: Font().Size14()))
+                                }
+                                
+                                
+                                VStack(alignment: .leading, spacing: 8){
+                                    
+                                    Text("Position")
+                                        .foregroundColor(Color(hex: 0xEB7B77))
+                                        .font(.custom(Font().Bold(), size: Font().Size13()))
+                                    
+                                    Text(index.position)
+                                        .foregroundColor(Color(hex: 0x6F4B51))
+                                        .font(.custom(Font().Bold(), size: Font().Size14()))
+                                }
+                                
+                                
+                                
+                                VStack(alignment: .leading, spacing: 8){
+                                    
+                                    Text("Project")
+                                        .foregroundColor(Color(hex: 0xEB7B77))
+                                        .font(.custom(Font().Bold(), size: Font().Size13()))
+                                    
+                                     Text(index.Project)
+                                        .foregroundColor(Color(hex: 0x6F4B51))
+                                        .font(.custom(Font().Bold(), size: Font().Size16()))
+                                }
+                                
+                                
+                                VStack(alignment: .leading, spacing: 8){
+                                    
+                                    Text("Description")
+                                        .foregroundColor(Color(hex: 0xEB7B77))
+                                        .font(.custom(Font().Bold(), size: Font().Size13()))
+                                    
+                                     Text(index.description)
+                                        .foregroundColor(Color(hex: 0x6F4B51))
+                                        .font(.custom(Font().Italic(), size: Font().Size14()))
+                                }
+
+                                
+                                Button{
+                                    print("View detail project: \(index.Project)")
+
+                                }label: {
+                                    Text("View detail")
+                                        .foregroundColor(Color.white)
+                                        .font(.custom(Font().Italic(), size: Font().Size14()))
+                                        .padding(.vertical, 8).padding(.horizontal, 12)
+                                        .background(
+                                            Color(hex: 0xEB7B77)
+                                        )
+                                        .cornerRadius(20)
+                                        .shadow(color: Color(hex: 0xEB7B77, alpha: 0.8), radius: 8, x: 4, y: 4)
+                                        .padding(.vertical, 16)
+                                        
+                                }
+                                
+                                
+                                Spacer()
+                            }
+                            
+                            Spacer()
+                            
+                        }.padding(.leading, 5)
+                    }
+                    
+                    //Last dot
+                    
+                    HStack(alignment: .center, spacing: 16){
+                        
+                        Circle()
+                            .foregroundColor(Color(hex: 0x9A293E))
+                            .frame(width: 12, height: 12, alignment: .center)
+                        
+                        Spacer()
+                        
+                    }.padding(.vertical, 4)
                     
                 }.padding(.all, 16)
                 
+                
+                //MARK: - EDUCATION
+                
+//                HStack(alignment: .center, spacing: 16){
+//                 
+//                    Text("Another Certifications")
+//                        .foregroundColor(Color(hex: 0x6F4B51))
+//                        .font(.custom(Font().Bold(), size: Font().Size24()))
+//                    
+//                    Spacer()
+//                    
+//                }.padding(.all, 16)
+                
+                
+                //add spacer for avoid tabbar when scroll to bottom
+                Spacer()
+                    .frame(height: 100, alignment: .center)
             }
         }
         .padding(.top, 50)
@@ -121,5 +179,13 @@ extension General_View {
         .navigationTitle("")
         .navigationBarHidden(true)
         .background(Color(hex: 0xFCFAF7))
+        .onAppear(perform: {
+            
+            //avoid duplicate
+            if arrExperience.isEmpty{
+                setupData()
+            }
+           
+        })
     }
 }

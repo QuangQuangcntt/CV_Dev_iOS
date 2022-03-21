@@ -48,6 +48,9 @@ struct Font {
     func Size11() -> CGFloat{
         return 11
     }
+    func Size13() -> CGFloat{
+        return 13
+    }
     func Size14() -> CGFloat{
         return 14
     }
