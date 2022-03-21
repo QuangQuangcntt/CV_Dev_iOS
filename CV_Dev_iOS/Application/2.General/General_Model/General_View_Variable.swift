@@ -16,13 +16,29 @@ struct General_View {
     //tabbar state
     @ObservedObject var selectType: tabbarState
     
-    struct dataExperience: Hashable {
-        var time: String = ""
-        var company: String = ""
-        var position: String = ""
-        var Project: String = ""
-        var description: String = ""
+    enum typeIcon {
+        case mainSkill
+        case language
+        case PersonalSkill
     }
     
-    @State var arrExperience: [dataExperience] = []
+    struct skillName: Hashable {
+        var title: String = ""
+        var icon: String = ""
+    }
+    
+    struct dataSkill: Hashable {
+        var title: String = ""
+        var mainData: [skillName] = []
+        var type: typeIcon = .mainSkill
+    }
+    
+    @State var arrDataSkill: [dataSkill] = []
+    
+    let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
+    
 }

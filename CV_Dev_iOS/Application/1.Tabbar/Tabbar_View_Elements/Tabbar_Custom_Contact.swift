@@ -33,7 +33,7 @@ struct Tabbar_Custom_Contact: View {
             
             Text("Contact")
                 .foregroundColor(Color(hex: isContact ? 0xF5B433 : 0x231f20))
-                .font(.custom(Font().Regular(), size: Font().Size11()))
+                .font(.custom(isContact ? Font().Bold() : Font().Regular(), size: Font().Size11()))
             
         }
         .onReceive(self.selectType.$click){ value in

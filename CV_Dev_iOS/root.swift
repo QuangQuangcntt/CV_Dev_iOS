@@ -11,7 +11,7 @@ import SwiftUI
 struct root: App {
     var body: some Scene {
         WindowGroup {
-            Tabbar()
+            Tabbar().environmentObject(AppState()) //AppState : go back to root view
         }
     }
 }

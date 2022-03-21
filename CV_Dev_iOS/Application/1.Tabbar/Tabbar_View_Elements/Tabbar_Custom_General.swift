@@ -35,7 +35,7 @@ struct Tabbar_Custom_General: View {
 
             Text("General")
                 .foregroundColor(Color(hex: isGeneral ? 0xF5B433 : 0x231f20))
-                .font(.custom(Font().Regular(), size: Font().Size11()))
+                .font(.custom(isGeneral ? Font().Bold() : Font().Regular(), size: Font().Size11()))
                 .padding(.top, 8)
             
         }

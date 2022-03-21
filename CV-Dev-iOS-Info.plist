@@ -4,13 +4,14 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Quantify.ttf</string>
 		<string>Roboto-Italic.ttf</string>
-		<string>Roboto-Light.ttf</string>
+		<string>Roboto-LightItalic.ttf</string>
 		<string>Roboto-MediumItalic.ttf</string>
+		<string>Roboto-Light.ttf</string>
 		<string>Roboto-Medium.ttf</string>
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-LightItalic.ttf</string>
 	</array>
 </dict>
 </plist>

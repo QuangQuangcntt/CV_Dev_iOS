@@ -26,7 +26,7 @@ struct Tabbar_Custom_Project: View {
                     
                     Text("Project")
                         .foregroundColor(Color(hex: isProject ? 0xF5B433 : 0x231f20))
-                        .font(.custom(Font().Regular(), size: Font().Size11()))
+                        .font(.custom(isProject ? Font().Bold() : Font().Regular(), size: Font().Size11()))
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
                         .offset(x: -2, y: -2)

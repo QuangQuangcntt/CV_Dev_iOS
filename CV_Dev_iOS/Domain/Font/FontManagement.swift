@@ -12,6 +12,9 @@ import UIKit
 
 struct Font {
     
+    func Title()-> String{
+        return "Quantify"
+    }
     func Bold()-> String{
         return "Roboto-Bold"
     }
@@ -32,9 +35,6 @@ struct Font {
     }
     func Regular()-> String{
         return "Roboto-Regular"
-    }
-    func aweSome() -> String{
-        return "FontAwesome5Free-Solid"
     }
     
     

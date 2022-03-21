@@ -28,7 +28,7 @@ struct General_View_Header: View {
                 
                 Text("TRAN MINH QUANG")
                     .foregroundColor(Color(hex: 0x6F4B51))
-                    .font(.custom(Font().Bold(), size: Font().Size30()))
+                    .font(.custom(Font().Title(), size: Font().Size30()))
                 
                 Text("Mobile Developer")
                     .foregroundColor(Color(hex: 0xEB7B77))
