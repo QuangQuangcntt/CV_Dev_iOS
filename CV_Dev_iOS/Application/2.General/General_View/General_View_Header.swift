@@ -27,11 +27,11 @@ struct General_View_Header: View {
             VStack(alignment: .leading, spacing: 32){
                 
                 Text("TRAN MINH QUANG")
-                    .foregroundColor(Color(hex: 0x6F4B51))
+                    .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                     .font(.custom(Font().Title(), size: Font().Size30()))
                 
                 Text("Mobile Developer")
-                    .foregroundColor(Color(hex: 0xEB7B77))
+                    .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                     .font(.custom(Font().Bold(), size: Font().Size24()))
                 
                 //Basic infor
@@ -43,15 +43,15 @@ struct General_View_Header: View {
                     VStack(alignment: .leading, spacing: 16) {
 
                         Text("Birthday")
-                            .foregroundColor(Color(hex: 0xEB7B77))
+                            .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
                         
                         Text("Nationality")
-                            .foregroundColor(Color(hex: 0xEB7B77))
+                            .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
                         
                         Text("Status")
-                            .foregroundColor(Color(hex: 0xEB7B77))
+                            .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
 
                     }.frame(width: 90, alignment: .leading)
@@ -61,15 +61,15 @@ struct General_View_Header: View {
                     VStack(alignment: .leading, spacing: 16) {
 
                         Text("10 .10 .1998")
-                            .foregroundColor(Color(hex: 0x6F4B51))
+                            .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
 
                         Text("Viet Nam")
-                            .foregroundColor(Color(hex: 0x6F4B51))
+                            .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
 
                         Text("Single")
-                            .foregroundColor(Color(hex: 0x6F4B51))
+                            .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
                     }
                 }

@@ -55,7 +55,7 @@ extension View {
 
 extension View {
   var colorNavigation: some View {
-    self.navigationBarColor(textColor: UIColor(rgb: 0x6F4B51))   //set navigation bar title color
+    self.navigationBarColor(textColor: UIColor(rgb: Int(CIManager().TextColor_Brown())))   //set navigation bar title color
   }
 }
 

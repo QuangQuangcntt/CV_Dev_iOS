@@ -39,4 +39,16 @@ extension Project_View {
                                             Project: "DNBCnet",
                                             description: "Fintech Application"))
     }
+    
+    func goToScreen(project: String){
+        
+        switch project{
+            
+            case "DNBCnet":
+                isDNBCnet = true
+            default:
+                isDNBCnet = true
+        }
+        
+    }
 }
