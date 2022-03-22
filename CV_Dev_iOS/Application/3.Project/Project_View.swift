@@ -47,6 +47,8 @@ struct Project_View: View {
                         Text(index.time)
                             .foregroundColor(Color(hex: 0x6F4B51))
                             .font(.custom(Font().MediumItalic(), size: Font().Size16()))
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
                         
                         Spacer()
                         
@@ -73,6 +75,8 @@ struct Project_View: View {
                                 Text(index.company)
                                     .foregroundColor(Color(hex: 0x6F4B51))
                                     .font(.custom(Font().Bold(), size: Font().Size14()))
+                                    .multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                             
                             
@@ -85,6 +89,8 @@ struct Project_View: View {
                                 Text(index.position)
                                     .foregroundColor(Color(hex: 0x6F4B51))
                                     .font(.custom(Font().Bold(), size: Font().Size14()))
+                                    .multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                             
                             
@@ -98,6 +104,8 @@ struct Project_View: View {
                                  Text(index.Project)
                                     .foregroundColor(Color(hex: 0x6F4B51))
                                     .font(.custom(Font().Bold(), size: Font().Size16()))
+                                    .multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                             
                             
@@ -110,6 +118,8 @@ struct Project_View: View {
                                  Text(index.description)
                                     .foregroundColor(Color(hex: 0x6F4B51))
                                     .font(.custom(Font().Italic(), size: Font().Size14()))
+                                    .multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
 
                             

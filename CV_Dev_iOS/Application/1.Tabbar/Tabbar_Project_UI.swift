@@ -18,9 +18,13 @@ struct Tabbar_Project_UI: View {
     var body: some View {
 
             
-    Image("Project_icon")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
+//    Image("Project_icon")
+//            .resizable()
+//            .aspectRatio(contentMode: .fill)
+        
+        Text("</>")
+            .foregroundColor(Color.black)
+            .font(.custom(Font().Medium(), size: Font().Size16()))
         .padding(.all, 12)
         .background(Circle()
                         .fill(LinearGradient(
@@ -30,11 +34,12 @@ struct Tabbar_Project_UI: View {
                             ))
                         .rotationEffect(.degrees(isRotate ? 0 : 360), anchor: .center)
         )
-        .frame(width: 46, height: 46, alignment: .center)
+        .padding(.all, 4)
+        //.frame(width: 46, height: 46, alignment: .center)
         .background(
             Circle()
                 .foregroundColor(Color(hex: 0xeeeeee, alpha: 1))
-                .frame(width: 54, height: 54, alignment: .center)
+                //.frame(width: 54, height: 54, alignment: .center)
         )
         .onAppear(perform: {
             

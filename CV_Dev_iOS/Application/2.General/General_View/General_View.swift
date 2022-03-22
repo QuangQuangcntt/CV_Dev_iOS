@@ -27,6 +27,8 @@ extension General_View: View {
                 
                 ForEach(arrDataSkill, id: \.self) { item in
                     
+                   
+                    
                     HStack(alignment: .center, spacing: 0){
                         
                         Text(item.title)
@@ -35,7 +37,7 @@ extension General_View: View {
                         
                         Spacer()
                         
-                    }.padding(.all, 16)
+                    }.padding(.all, 16).padding(.top, 24)
                     
                     LazyVGrid(columns: columns, spacing: 20) {
                         
@@ -60,7 +62,26 @@ extension General_View: View {
                 }
 
                 
-                //MARK: - EDUCATION
+                //MARK: - PERSONAL PROFILE
+                
+                HStack(alignment: .center, spacing: 0){
+                    
+                    Text("Personal Profile")
+                        .foregroundColor(Color(hex: 0x6F4B51))
+                        .font(.custom(Font().Title(), size: Font().Size24()))
+                    
+                    Spacer()
+                    
+                }.padding(.all, 16).padding(.top, 24)
+                
+                Text(personalProfile)
+                    .foregroundColor(Color(hex: 0x6F4B51))
+                    .font(.custom(Font().LightItalic(), size: Font().Size14()))
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineSpacing(8)
+                    .padding(.all, 16)
+                
 
                 Spacer()
                     .frame(height: 100, alignment: .center)
@@ -76,3 +97,8 @@ extension General_View: View {
         })
     }
 }
+
+
+var personalProfile = """
+Swift developer, having 18 months of Swift experience. Fluent in english and strong knowledge of OOP, MVC. Searching information skills, communication skills, solid understanding of the full mobile development life cycle, RESTful API and SwiftUI. Loving mobile developer. Finding opportunity for studying and working.
+"""
