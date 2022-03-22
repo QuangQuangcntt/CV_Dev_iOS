@@ -25,7 +25,13 @@ struct Project_View: View {
     
     @State var arrExperience: [dataExperience] = []
     
+    @State var isSecretVault: Bool = false
+    
+    @State var isKoreanApp: Bool = false
+    
     @State var isDNBCnet: Bool = false
+    
+    @State var isOneIBC: Bool = false
     
     var body: some View {
         
@@ -33,7 +39,10 @@ struct Project_View: View {
             
            // snowSpriteKit()
             
-            Project_View_GoToScreen(isDNBCnet: $isDNBCnet)
+            Project_View_GoToScreen(isSecretVault: $isSecretVault,
+                                    isKoreanApp: $isKoreanApp,
+                                    isDNBCnet: $isDNBCnet,
+                                    isOneIBC: $isOneIBC)
             
             ScrollView(.vertical, showsIndicators: false) {
 

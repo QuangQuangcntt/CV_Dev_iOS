@@ -44,8 +44,14 @@ extension Project_View {
         
         switch project{
             
+            case "Secret Vault":
+                isSecretVault = true
             case "DNBCnet":
                 isDNBCnet = true
+            case "OneIBC Digital":
+                isOneIBC = true
+            case "Korean language app (For graduate thesis)":
+                isKoreanApp = true
             default:
                 isDNBCnet = true
         }

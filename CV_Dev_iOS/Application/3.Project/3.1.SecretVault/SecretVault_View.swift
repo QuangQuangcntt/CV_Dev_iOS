@@ -1,13 +1,13 @@
 //
-//  DNBCnet_View.swift
+//  SecretVault_View.swift
 //  CV_Dev_iOS
 //
-//  Created by Quang Tran on 22/03/2022.
+//  Created by Quang Tran on 23/03/2022.
 //
 
 import SwiftUI
 
-struct DNBCnet_View: View {
+struct SecretVault_View: View {
     
     let columns = [
             GridItem(.flexible()),
@@ -21,15 +21,12 @@ struct DNBCnet_View: View {
     }
     
     @State var arrTech: [Technology_Name] = [
-        Technology_Name(title: "SwiftUI", icon: "swiftUI"),
+        Technology_Name(title: "Swift - UIKit", icon: "Swift_UIKit"),
+        Technology_Name(title: "Realm database", icon: "Realm"),
+        Technology_Name(title: "File Manager", icon: "JWT"),
+        
         Technology_Name(title: "Firebase", icon: "Firebase"),
-        Technology_Name(title: "JWT", icon: "JWT"),
-        Technology_Name(title: "KingFisher", icon: "KingFisher"),
-        Technology_Name(title: "Lottie", icon: "Lottie"),
-        Technology_Name(title: "GoogleMap", icon: "GoogleMap"),
-        Technology_Name(title: "PhoneNumberkit", icon: "PhoneNumberKit"),
-        Technology_Name(title: "Boyer Moore algorithm", icon: "Algorithms"),
-        Technology_Name(title: "Fuzzy search algorithm", icon: "Algorithms"),
+        
     ]
     
     var body: some View {
@@ -46,12 +43,10 @@ struct DNBCnet_View: View {
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().Title(), size: Font().Size24()))
                     
-                    + Text("once person (only me)")
+                    + Text("Two students")
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().Italic(), size: Font().Size16()))
-                    
-                    
-                    
+
                     Spacer()
                     
                 }.padding(.all, 16)
@@ -95,7 +90,7 @@ struct DNBCnet_View: View {
                     Spacer()
                 }.padding(.all, 16)
                 
-                Text("Make all app, from start project to finish")
+                Text("Made main home screen")
                     .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                     .font(.custom(Font().LightItalic(), size: Font().Size14()))
                     .multilineTextAlignment(.leading)
@@ -105,36 +100,28 @@ struct DNBCnet_View: View {
                 
                 HStack(alignment: .center, spacing: 0) {
 
-                    Text("Is on app store ?")
+                    Text("Is this project on app store ?")
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().Title(), size: Font().Size24()))
                     
                     Spacer()
                 }.padding(.all, 16)
                 
-                Button{
-                    if let url = URL(string: "itms-apps://apple.com/app/id1536242101") {
-                        UIApplication.shared.open(url)
-                    }
-                }label: {
-                        
-                    Text("View Project")
-                        .foregroundColor(Color.white)
-                        .font(.custom(Font().Italic(), size: Font().Size14()))
-                        .padding(.vertical, 8).padding(.horizontal, 12)
-                        .background(
-                            Color(hex: CIManager().TextColor_Pink())
-                        )
-                        .cornerRadius(20)
-                        .shadow(color: Color(hex: CIManager().TextColor_Pink(), alpha: 0.8), radius: 8, x: 4, y: 4)
-                        .padding(.horizontal, 16)
-                }
+                Text("This project was on app store. And not available now")
+                    .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
+                    .font(.custom(Font().LightItalic(), size: Font().Size14()))
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineSpacing(8)
+                    .padding(.all, 16)
+                
+                
 
             }
             .padding(.vertical, 16)
         }
         .navigationBarHidden(false)
-        .navigationBarTitle("DNBCnet", displayMode: .large) // ⬅️ Important part
+        .navigationBarTitle("Secret Vault", displayMode: .large) // ⬅️ Important part
         .colorNavigation
         .background(Color(hex: 0xFCFAF7))
         

@@ -1,13 +1,13 @@
 //
-//  DNBCnet_View.swift
+//  OneIBC.swift
 //  CV_Dev_iOS
 //
-//  Created by Quang Tran on 22/03/2022.
+//  Created by Quang Tran on 23/03/2022.
 //
 
 import SwiftUI
 
-struct DNBCnet_View: View {
+struct OneIBC: View {
     
     let columns = [
             GridItem(.flexible()),
@@ -24,12 +24,14 @@ struct DNBCnet_View: View {
         Technology_Name(title: "SwiftUI", icon: "swiftUI"),
         Technology_Name(title: "Firebase", icon: "Firebase"),
         Technology_Name(title: "JWT", icon: "JWT"),
+        
+        Technology_Name(title: "OneSignal", icon: "OneSignal"),
+        
         Technology_Name(title: "KingFisher", icon: "KingFisher"),
         Technology_Name(title: "Lottie", icon: "Lottie"),
         Technology_Name(title: "GoogleMap", icon: "GoogleMap"),
         Technology_Name(title: "PhoneNumberkit", icon: "PhoneNumberKit"),
-        Technology_Name(title: "Boyer Moore algorithm", icon: "Algorithms"),
-        Technology_Name(title: "Fuzzy search algorithm", icon: "Algorithms"),
+        Technology_Name(title: "AppsFlyer", icon: "AppsFlyer"),
     ]
     
     var body: some View {
@@ -105,7 +107,7 @@ struct DNBCnet_View: View {
                 
                 HStack(alignment: .center, spacing: 0) {
 
-                    Text("Is on app store ?")
+                    Text("Is this project on app store ?")
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().Title(), size: Font().Size24()))
                     
@@ -113,7 +115,7 @@ struct DNBCnet_View: View {
                 }.padding(.all, 16)
                 
                 Button{
-                    if let url = URL(string: "itms-apps://apple.com/app/id1536242101") {
+                    if let url = URL(string: "itms-apps://apple.com/app/id1574638100") {
                         UIApplication.shared.open(url)
                     }
                 }label: {
@@ -129,14 +131,17 @@ struct DNBCnet_View: View {
                         .shadow(color: Color(hex: CIManager().TextColor_Pink(), alpha: 0.8), radius: 8, x: 4, y: 4)
                         .padding(.horizontal, 16)
                 }
+                
+                
 
             }
             .padding(.vertical, 16)
         }
         .navigationBarHidden(false)
-        .navigationBarTitle("DNBCnet", displayMode: .large) // ⬅️ Important part
+        .navigationBarTitle("OneIBC Digital", displayMode: .large) // ⬅️ Important part
         .colorNavigation
         .background(Color(hex: 0xFCFAF7))
         
     }
 }
+

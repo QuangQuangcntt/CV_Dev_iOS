@@ -9,12 +9,33 @@ import SwiftUI
 
 struct Project_View_GoToScreen: View {
     
+    @Binding var isSecretVault: Bool
+    
+    @Binding var isKoreanApp: Bool
+    
     @Binding var isDNBCnet: Bool
+    
+    @Binding var isOneIBC: Bool
     
     var body: some View {
         
+        
+        
+        NavigationLink(destination: SecretVault_View(), isActive: $isSecretVault)
+        { EmptyView() }.isDetailLink(false)
+        
+        NavigationLink(destination: Korean_View(), isActive: $isKoreanApp)
+        { EmptyView() }.isDetailLink(false)
+        
         NavigationLink(destination: DNBCnet_View(), isActive: $isDNBCnet)
         { EmptyView() }.isDetailLink(false)
+        
+        NavigationLink(destination: OneIBC(), isActive: $isOneIBC)
+        { EmptyView() }.isDetailLink(false)
+        
+        
+        
+        
     }
 }
 
