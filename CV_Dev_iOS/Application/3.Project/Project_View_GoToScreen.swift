@@ -27,10 +27,10 @@ struct Project_View_GoToScreen: View {
         NavigationLink(destination: Korean_View(), isActive: $isKoreanApp)
         { EmptyView() }.isDetailLink(false)
         
-        NavigationLink(destination: DNBCnet_View(), isActive: $isDNBCnet)
+        NavigationLink(destination: DNBCnet_View_LargeLogoBar(), isActive: $isDNBCnet)
         { EmptyView() }.isDetailLink(false)
         
-        NavigationLink(destination: OneIBC(), isActive: $isOneIBC)
+        NavigationLink(destination: OneIBC_View_LargeLogoBar(), isActive: $isOneIBC)
         { EmptyView() }.isDetailLink(false)
         
         

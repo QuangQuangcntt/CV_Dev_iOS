@@ -47,8 +47,10 @@ struct Tabbar: View {
             NavigationView {
                 
                 Contact_View(selectType: selectType)
-                    .opacity(selectType.click == .Contact ? 1: 0)
-                    .ignoresSafeArea(.container, edges: .top)    // totally hide navigation bar
+                    .navigationBarHidden(false)
+                    .navigationBarTitle("Contact", displayMode: .large) // ⬅️ Important part
+                    .colorNavigation
+                  
                 
             } .opacity(selectType.click == .Contact ? 1: 0)
             
