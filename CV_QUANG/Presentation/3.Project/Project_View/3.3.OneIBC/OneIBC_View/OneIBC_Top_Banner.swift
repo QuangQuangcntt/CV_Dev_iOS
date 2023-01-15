@@ -18,12 +18,26 @@ extension OneIBC {
                     .foregroundColor(Color.white)
                     .frame(height: 80)
                 
+               
                 Text("OneIBC")
 //                    .font(.custom("", size: txtSIZE))
                     .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                     .font(.custom(Font().Title(), size: 28))
                     .offset(y: 16)
                     .opacity(showSmallTitle ? 1 : 0)
+                
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack(alignment: .center, spacing: 0){
+                        
+                        Text("< Back")
+                            .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
+                            .font(.custom(Font().Bold(), size: Font().Size16()))
+                        
+                        Spacer()
+                    }
+                }.padding(.all, 16).padding(.top, 32)
 
             }
            
