@@ -16,6 +16,17 @@ extension Base_View {
             content
                 .offset(x: offSetView, y: 0)
             
+            //Cover bar
+            
+            VStack(alignment: .center, content: {
+                
+                Rectangle()
+                    .frame(height: 40)
+                    .foregroundColor(Color(hex: 0xFCFAF7))
+                
+                Spacer()
+            })
+            
             if config_Base.isShowDrag {
                 //---------------- DRAG BUTTON-----------------//
                 DragAbleButton(dragAmount: $dragAmount).position(x: WV*0.5, y: HV*0.5)

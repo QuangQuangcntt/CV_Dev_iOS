@@ -77,6 +77,24 @@ extension Contact_View {
                         Spacer()
                     }
                     
+                    Divider()
+                    
+                    Text("Introducing the CV app")
+                        .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
+                        .font(.custom(Font().Title(), size: Font().Size24()))
+                        .padding(.top, 16)
+                    
+                    Contact_View_TXT(txt: "This app is all customization, all animation and download image function is custom. \nOnly once framework using for supporting download SVG image (Swift package dependencies).")
+                        
+                    Contact_View_TXT(txt: "List of features and technologies:")
+                        .padding(.top, 8)
+
+                        ForEach(Array(arrFeatures.enumerated()), id: \.offset) { item, columnsData in
+
+                        Contact_View_TXT(txt: "\(item + 1). \(columnsData)")
+                            .padding(.horizontal, 16)
+                    }
+                    
                 }.padding(.all, 16).padding(.leading, 8).padding(.bottom, 150)
             
             }.padding(.top, 38)

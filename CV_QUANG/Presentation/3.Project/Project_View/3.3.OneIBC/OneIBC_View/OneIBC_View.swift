@@ -31,7 +31,7 @@ extension OneIBC {
                         perform: { value in
 
                             //MARK: - for animation image at list
-                            Animation_OneIBC(value: value)
+                           // Animation_OneIBC(value: value)
                         }
                     )
                 }

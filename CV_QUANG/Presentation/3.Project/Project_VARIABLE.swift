@@ -28,12 +28,25 @@ struct Project_View: View {
     }
     
     @State var arrExperience: [dataExperience] = []
+ 
+    @State var isProjectDetail: Bool = false
     
-    @State var isSecretVault: Bool = false
-    
-    @State var isKoreanApp: Bool = false
-    
-    @State var isDNBCnet: Bool = false
-    
-    @State var isOneIBC: Bool = false
+    @State var project_detail: data_project = data_project()
+}
+
+
+//content detail
+
+struct technology: Hashable {
+    var ID = UUID().uuidString
+    var title: String = ""
+    var img: String = ""
+}
+
+struct data_project {
+    var title: String = ""
+    var teamSize: String = ""
+    var arrTech: [technology] = []
+    var mainResponse: String = ""
+    var URL_app: String = ""
 }

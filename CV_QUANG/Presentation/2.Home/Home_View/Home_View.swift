@@ -53,7 +53,7 @@ extension Home_View {
                                 
                             }.padding(.all, 16).padding(.top, 24)
                             
-                            StaggeredGrid(columns: 3, spacing: 30, list: item.mainData, content: { sub in
+                            StaggeredGrid(columns: 3, spacing: 30, list: item.mainData, isLazy: false, content: { sub in
                                 
                                 VStack(alignment: .center, spacing: 8){
                                     
@@ -83,6 +83,7 @@ extension Home_View {
                 .padding(.bottom, 120)
             
             }.padding(.top, 38)
+            .background(Color(hex: 0xFCFAF7))
             .onAppear(perform: {
                 
                 onAppearProcess()

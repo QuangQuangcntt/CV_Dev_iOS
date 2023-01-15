@@ -1,8 +1,8 @@
 //
-//  Contact_Button.swift
-//  CV_Quang_IOS
+//  Contact_View_element.swift
+//  CV_QUANG
 //
-//  Created by Quang Tran on 13/01/2023.
+//  Created by Quang Tran on 15/01/2023.
 //
 
 import SwiftUI
@@ -28,5 +28,22 @@ struct Contact_Button: View {
             .shadow(color: Color(hex: CIManager().TextColor_Pink(), alpha: 0.8),
                     radius: 8, x: 4, y: 4)
             .padding(.vertical, 16)
+    }
+}
+
+struct Contact_View_TXT: View {
+            
+    var txt: String = ""
+    
+    init(txt: String){
+        self.txt = txt
+    }
+    var body: some View {
+        Text(txt)
+            .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
+            .font(.custom(Font().LightItalic(), size: Font().Size14()))
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .lineSpacing(8)
     }
 }

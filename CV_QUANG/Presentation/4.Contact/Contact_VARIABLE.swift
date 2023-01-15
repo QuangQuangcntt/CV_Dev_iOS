@@ -36,4 +36,10 @@ struct Contact_View: View {
     @State var arrDataInfor: [inforContact] = []
     
     @Environment(\.openURL) var openURL
+    
+    @State var arrFeatures: [String] = ["Download and cache image",
+                                        "Change language (English and VietNam)",
+                                        "Multi environment schema(test and release)",
+                                        "Bubble button",
+                                        "Using lazy, GCD, NSLock for optimize memory and performance"]
 }

@@ -22,14 +22,18 @@ struct StaggeredGrid<Content: View, T: Hashable>: View {
 
     var spacing: CGFloat = 0
     
+    var isLazy: Bool = false
+    
     init(columns: Int,
          spacing: CGFloat,
          list: [T],
+         isLazy: Bool,
          @ViewBuilder content: @escaping (T) -> Content) {
 
         self.content = content
         self.spacing = spacing
         self.list = list
+        self.isLazy = isLazy
         self.columns = columns
     }
     
@@ -63,22 +67,43 @@ struct StaggeredGrid<Content: View, T: Hashable>: View {
     }
     
     var body: some View {
+        if isLazy {
+            
+            HStack(alignment: .top){
+                    
+                    let data = setUpList()
+                    
+                    ForEach(Array(data.enumerated()), id: \.offset) { item, columnsData in
 
-        HStack(alignment: .top, spacing: self.list.count < 3 ? self.spacing * 2 : self.spacing){
-                
-                let data = setUpList()
-                
-                ForEach(Array(data.enumerated()), id: \.offset) { item, columnsData in
-
-                    VStack(spacing: 16){
-                        
-                        ForEach(columnsData, id: \.self) { object in
+                        LazyVStack(spacing: 16){
                             
-                            content(object)
+                            ForEach(columnsData, id: \.self) { object in
+                                
+                                content(object)
+                            }
                         }
                     }
                 }
-            }
+        }
+        else{
+            HStack(alignment: .top, spacing: self.list.count < 3 ? self.spacing * 2 : self.spacing){
+                    
+                    let data = setUpList()
+                    
+                    ForEach(Array(data.enumerated()), id: \.offset) { item, columnsData in
+
+                        VStack(spacing: 16){
+                            
+                            ForEach(columnsData, id: \.self) { object in
+                                
+                                content(object)
+                            }
+                        }
+                    }
+                }
+        }
+
+        
 
         
         // if arr[0][0] == 2  --> Spacer() content Spacer()

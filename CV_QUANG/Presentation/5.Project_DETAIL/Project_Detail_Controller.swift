@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-extension OneIBC {
+extension Project_Detail {
     
-    func Animation_OneIBC(value: CGFloat){
+    func Animation_Project_Detail(value: CGFloat){
         
         let spacing = currentPos - value
         

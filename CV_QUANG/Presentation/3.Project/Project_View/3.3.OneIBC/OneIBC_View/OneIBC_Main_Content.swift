@@ -24,9 +24,7 @@ extension OneIBC {
                 + Text("one person (only me)")
                     .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                     .font(.custom(Font().Italic(), size: Font().Size16()))
-                
-                
-                
+
                 Spacer()
                 
             }.padding(.all, 16)

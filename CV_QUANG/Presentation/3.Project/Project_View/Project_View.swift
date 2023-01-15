@@ -17,10 +17,8 @@ extension Project_View {
                 
                // snowSpriteKit()
                 
-                Project_View_GoToScreen(isSecretVault: $isSecretVault,
-                                        isKoreanApp: $isKoreanApp,
-                                        isDNBCnet: $isDNBCnet,
-                                        isOneIBC: $isOneIBC)
+            NavigationLink(destination: Project_Detail(project_detail: $project_detail), isActive: $isProjectDetail)
+            { EmptyView() }.isDetailLink(false)
                 
                 ScrollView(.vertical, showsIndicators: false) {
 
@@ -172,18 +170,17 @@ extension Project_View {
                     setupData()
                 }
             })
-            .onReceive(self.appState.$moveToDashboard, perform: { moveToDashboard in
-                
-                if TABBAR.click == .Project && moveToDashboard {
-                    
-                    print("Move to dashboard: \(moveToDashboard)")
-                    
-                    isDNBCnet = false   // go home from DNBC screen
-                    
-                    self.appState.moveToDashboard = false
-                }
-
-            }),config_Base: $config_Base,
+//            .onReceive(self.appState.$moveToDashboard, perform: { moveToDashboard in
+//                
+//                if TABBAR.click == .Project && moveToDashboard {
+//                    
+//                    print("Move to dashboard: \(moveToDashboard)")
+//
+//                    self.appState.moveToDashboard = false
+//                }
+//
+//            })
+                  ,config_Base: $config_Base,
                 func_Swipe_Back: {})
     }
 }
