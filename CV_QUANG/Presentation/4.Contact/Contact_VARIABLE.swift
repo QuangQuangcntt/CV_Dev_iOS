@@ -37,9 +37,9 @@ struct Contact_View: View {
     
     @Environment(\.openURL) var openURL
     
-    @State var arrFeatures: [String] = ["Download and cache image",
-                                        "Change language (English and VietNam)",
-                                        "Multi environment schema(test and release)",
-                                        "Bubble button",
-                                        "Using lazy, GCD, NSLock for optimize memory and performance"]
+    @State var arrFeatures: [String] = ["contact_1",
+                                        "contact_2",
+                                        "contact_3",
+                                        "contact_4",
+                                        "contact_5"]
 }

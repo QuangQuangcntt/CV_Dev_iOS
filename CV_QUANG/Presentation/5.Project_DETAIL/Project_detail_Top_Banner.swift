@@ -21,7 +21,7 @@ struct Project_detail_Top_Banner: View {
          
             ZStack {
                 Rectangle()
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color(hex: 0xFCFAF7))
                     .frame(height: 80)
                 
                
@@ -46,9 +46,7 @@ struct Project_detail_Top_Banner: View {
                 }.padding(.all, 16).padding(.top, 32)
 
             }
-           
-            
-            
+
             Spacer()
         }
     }

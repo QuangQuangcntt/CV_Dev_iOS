@@ -58,7 +58,7 @@ extension Project_View {
 
             case "Korean language app (For graduate thesis)":
             
-                project_detail = data_project(title: "Korean Language",
+                project_detail = data_project(title: "Korean App",
                                        teamSize: "Two students",
                                        arrTech: [technology(title: "Swift - UIKit", img: "https://i.imgur.com/qd6OtrP.png"),
                                                  technology(title: "Realm database", img: "https://i.imgur.com/opzQSZ8.png"),

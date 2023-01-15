@@ -22,7 +22,7 @@ extension Home_View {
                     
                     HStack(alignment: .center, spacing: 0){
                         
-                        Text("Personal Profile")
+                        Text("Home_Profile", bundle: settings.bundle)
                             .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Title(), size: Font().Size24()))
                         
@@ -30,7 +30,7 @@ extension Home_View {
                         
                     }.padding(.all, 16).padding(.top, 24)
                     
-                    Text(personalProfile)
+                    Text("Home_profile_content", bundle: settings.bundle)
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().LightItalic(), size: Font().Size14()))
                         .multilineTextAlignment(.leading)
@@ -45,7 +45,9 @@ extension Home_View {
 
                             HStack(alignment: .center, spacing: 0){
                                 
-                                Text(item.title)
+                                let localizedKey = LocalizedStringKey.init("\(item.title)")
+                                
+                                Text(localizedKey, bundle: settings.bundle)
                                     .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                                     .font(.custom(Font().Title(), size: Font().Size24()))
                                 
@@ -69,7 +71,9 @@ extension Home_View {
                                     .frame(width: 36, height: 36, alignment: .center)
                                     .cornerRadius(20)
 
-                                    Text(sub.title)
+                                    let localizedKey = LocalizedStringKey.init("\(sub.title)")
+                                    
+                                    Text(localizedKey, bundle: settings.bundle)
                                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                                         .font(.custom(Font().Regular(), size: Font().Size14()))
                                         .multilineTextAlignment(.center)
@@ -86,8 +90,9 @@ extension Home_View {
             .background(Color(hex: 0xFCFAF7))
             .onAppear(perform: {
                 
-                onAppearProcess()
-                
+                if arrDataSkill.isEmpty {
+                    onAppearProcess()
+                }
             }),config_Base: $config_Base,
             func_Swipe_Back: {})
     }

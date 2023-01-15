@@ -11,3 +11,45 @@
 "Home_Tabbar" = "Home";
 "Project_Tabbar" = "Project";
 "Contact_Tabbar" = "Contact";
+
+//MARK: - HOME
+"Home_Title" = "Mobile Developer";
+"Home_Name" = "TRAN MINH QUANG";
+"Home_Birthday" = "Birthday";
+"Home_Nationality" = "Nationality";
+"Home_Status_Title" = "Status";
+"Home_Country" = "Viet Nam";
+"Home_Status" = "Single";
+"Home_Profile" = "Personal Profile";
+"Home_profile_content" = "Swift developer, having 2.5 years of Swift experience. Fluent in english and strong knowledge of OOP, MVC. Searching information skills, communication skills, solid understanding of the full mobile development life cycle, RESTful API and SwiftUI. Loving mobile developer. Finding opportunity for studying and working.";
+"Home_main_Skill" = "Main skills";
+
+"Home_languages" = "Languages";
+"Home_languages_VN" = "Vietnamese";
+"Home_languages_EN" = "English";
+
+"Home_Personal_Skills" = "Personal Skills";
+"Home_PS_Motivated" = "Highly motivated";
+"Home_PS_Searching" = "Searching information";
+"Home_PS_Algorithms" = "Algorithms";
+"Home_PS_Teamwork" = "Fluent in English";
+"Home_PS_Fluent" = "Teamwork";
+"Home_PS_Swimming" = "Swimming";
+
+//MARK: - PROJECT
+
+//MARK: - CONTACT
+"contact_basic" = "Basic Infor";
+"contact_phone" = "Phone";
+"contact_address" = "Address";
+"contact_address_detail" = "Nghia Phat Street, 6 ward, Tan Binh Distric, Ho Chi Minh city";
+"contact_social" = "Social network";
+"contact_Setting" = "Setting";
+"contact_Intro" = "Introducing the CV app";
+"contact_intro_content" = "This app is all customization, all animation and download image function is custom. Only once framework using for supporting download SVG image (Swift package dependencies).";
+"contact_List" = "List of features and technologies:";
+"contact_1" = "Download and cache image";
+"contact_2" = "Change language (English and VietNam)";
+"contact_3" = "Multi environment schema(test and release)";
+"contact_4" = "Bubble chat button";
+"contact_5" = "Using lazy, GCD, NSLock for optimize memory and performance";

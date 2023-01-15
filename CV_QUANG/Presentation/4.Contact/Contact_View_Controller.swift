@@ -21,7 +21,7 @@ extension Contact_View {
                                                    content: "tmqcntt@gmail.com",
                                                    type: .email),
                                              Infor(title: "Address",
-                                                   content: "Nghia Phat Street, 6 ward, Tan Binh Distric, Ho Chi Minh city",
+                                                   content: "contact_address_detail",
                                                    type: .address)]
                                         ))
         

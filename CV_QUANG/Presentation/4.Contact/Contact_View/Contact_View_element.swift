@@ -39,11 +39,48 @@ struct Contact_View_TXT: View {
         self.txt = txt
     }
     var body: some View {
-        Text(txt)
+        
+        let localizedKey = LocalizedStringKey.init("\(self.txt)")
+        
+        Text(localizedKey, bundle: settings.bundle)
             .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
             .font(.custom(Font().LightItalic(), size: Font().Size14()))
             .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
             .lineSpacing(8)
+    }
+}
+
+struct Contact_View_TXT_WithNumber: View {
+            
+    var txt: String = ""
+    
+    var num: Int = 0
+    
+    init(txt: String, num: Int){
+        self.txt = txt
+        self.num = num
+    }
+    var body: some View {
+        
+        HStack(alignment: .top, spacing: 0){
+            
+            Text("\(self.num). ")
+                .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
+                .font(.custom(Font().LightItalic(), size: Font().Size14()))
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .lineSpacing(8)
+            
+            let localizedKey = LocalizedStringKey.init("\(self.txt)")
+            
+            Text(localizedKey, bundle: settings.bundle)
+                .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
+                .font(.custom(Font().LightItalic(), size: Font().Size14()))
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .lineSpacing(8)
+        }
+        
     }
 }

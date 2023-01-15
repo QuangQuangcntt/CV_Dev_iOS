@@ -38,7 +38,7 @@ extension Base_View {
 
                 swipe_gesture_UI()
             }
-        }
+        }.background(Color(hex: 0xFCFAF7))
         .navigationTitle("")
         .navigationBarHidden(true)
         .ignoresSafeArea(.all, edges: .vertical)

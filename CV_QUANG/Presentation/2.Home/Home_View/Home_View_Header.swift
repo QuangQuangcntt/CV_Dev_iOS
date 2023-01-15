@@ -24,11 +24,11 @@ struct Home_View_Header: View {
             
             VStack(alignment: .leading, spacing: 32){
                 
-                Text("TRAN MINH QUANG")
+                Text("Home_Name", bundle: settings.bundle)
                     .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                     .font(.custom(Font().Title(), size: Font().Size30()))
                 
-                Text("Mobile Developer")
+                Text("Home_Title", bundle: settings.bundle)
                     .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                     .font(.custom(Font().Bold(), size: Font().Size24()))
                 
@@ -40,15 +40,15 @@ struct Home_View_Header: View {
 
                     VStack(alignment: .leading, spacing: 16) {
 
-                        Text("Birthday")
+                        Text("Home_Birthday", bundle: settings.bundle)
                             .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
                         
-                        Text("Nationality")
+                        Text("Home_Nationality", bundle: settings.bundle)
                             .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
                         
-                        Text("Status")
+                        Text("Home_Status_Title", bundle: settings.bundle)
                             .foregroundColor(Color(hex: CIManager().TextColor_Pink()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
 
@@ -62,11 +62,11 @@ struct Home_View_Header: View {
                             .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
 
-                        Text("Viet Nam")
+                        Text("Home_Country", bundle: settings.bundle)
                             .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
 
-                        Text("Single")
+                        Text("Home_Status", bundle: settings.bundle)
                             .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                             .font(.custom(Font().Bold(), size: Font().Size16()))
                     }

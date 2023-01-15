@@ -16,10 +16,6 @@ struct Home_View: View {
     
     //MARK: - MAIN CONTENT
     
-    var personalProfile = """
-    Swift developer, having 2.5 years of Swift experience. Fluent in english and strong knowledge of OOP, MVC. Searching information skills, communication skills, solid understanding of the full mobile development life cycle, RESTful API and SwiftUI. Loving mobile developer. Finding opportunity for studying and working.
-    """
-    
     struct skillName: Hashable {
         var ID = UUID().uuidString
         var title: String = ""

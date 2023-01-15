@@ -49,7 +49,9 @@ extension Contact_View {
 
                                 Spacer()
 
-                                Text(sub.content)
+                                let localizedKey = LocalizedStringKey.init("\(sub.content)")
+                                
+                                Text(localizedKey, bundle: settings.bundle)
                                     .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                                     .font(.custom(Font().Bold(), size: Font().Size16()))
                             }
@@ -58,7 +60,7 @@ extension Contact_View {
                     
                     Divider()
                     
-                    Text("Setting")
+                    Text("contact_Setting", bundle: settings.bundle)
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().Title(), size: Font().Size24()))
                         .padding(.top, 16)
@@ -78,21 +80,21 @@ extension Contact_View {
                     }
                     
                     Divider()
-                    
-                    Text("Introducing the CV app")
+
+                    Text("contact_Intro", bundle: settings.bundle)
                         .foregroundColor(Color(hex: CIManager().TextColor_Brown()))
                         .font(.custom(Font().Title(), size: Font().Size24()))
                         .padding(.top, 16)
                     
-                    Contact_View_TXT(txt: "This app is all customization, all animation and download image function is custom. \nOnly once framework using for supporting download SVG image (Swift package dependencies).")
+                    Contact_View_TXT(txt: "contact_intro_content")
                         
-                    Contact_View_TXT(txt: "List of features and technologies:")
+                    Contact_View_TXT(txt: "contact_List")
                         .padding(.top, 8)
 
                         ForEach(Array(arrFeatures.enumerated()), id: \.offset) { item, columnsData in
 
-                        Contact_View_TXT(txt: "\(item + 1). \(columnsData)")
-                            .padding(.horizontal, 16)
+                            Contact_View_TXT_WithNumber(txt: columnsData, num: (item + 1))
+                                .padding(.horizontal, 16)
                     }
                     
                 }.padding(.all, 16).padding(.leading, 8).padding(.bottom, 150)

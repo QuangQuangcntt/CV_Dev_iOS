@@ -79,7 +79,7 @@ struct Project_Detail: View {
                     
                 }.offset(x: xLabel, y: yLabel)
             }
-            //.animation(.linear, value: showSmallTitle)
+            .background(Color(hex: 0xFCFAF7))
             ,config_Base: $config_Base,
                 func_Swipe_Back: {
             self.presentationMode.wrappedValue.dismiss() //tap anywhere outside view to close view

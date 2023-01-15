@@ -94,7 +94,8 @@ struct Project_detail_Main_Content: View {
                 Spacer()
             }.padding(.all, 16)
             
-            if project_detail.URL_app.trimWhiteSpace() != "" {
+            if project_detail.URL_app.trimWhiteSpace() != "" &&
+                project_detail.URL_app.trimWhiteSpace() != "no"{
                 Button{
                     if let url = URL(string: project_detail.URL_app.trimWhiteSpace()) {
                         UIApplication.shared.open(url)

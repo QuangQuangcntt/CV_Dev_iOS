@@ -14,16 +14,18 @@ extension Project_Detail {
         
         let spacing = currentPos - value
         
-        //print("SPACING: \(value)")
+//        print("SPACING: \(value)")
         
-        yLabel += spacing*1
+        yLabel += spacing*1.4
+        
+        print("SPACING: \(yLabel)")
         
         if value > 0 {
             
-            xLabel -= spacing*2.7
-            zoom += spacing/180
+            xLabel -= spacing*2
+            zoom += spacing/100
             
-            let goToPos: CGFloat = 46
+            let goToPos: CGFloat = 33
 
 //            if value == goToPos {
 //                txtSIZE = 40 * zoom
@@ -41,6 +43,13 @@ extension Project_Detail {
             xLabel = 16
             zoom = 1
             showSmallTitle = false
+            
+            if yLabel > 140 {
+                yLabel = 140
+            }
+            else if yLabel < 80 {
+                yLabel = 80
+            }
         }
      
         currentPos = value
