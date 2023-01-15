@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  CV_Quang_IOS
+
+  Created by Quang Tran on 13/01/2023.
+  
+*/
+
+//MARK: - TABBAR
+
+"Home_Tabbar" = "Trang chủ";
+"Project_Tabbar" = "Dự án";
+"Contact_Tabbar" = "Liên hệ";
