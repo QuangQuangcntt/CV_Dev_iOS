@@ -16,7 +16,7 @@ struct StaggeredGrid<Content: View, T: Hashable>: View {
     //It will return each object from collection to build View...
     var content: (T) -> Content
     
-    var list: [T]
+    @Binding var list: [T]
 
     var columns: Int
 
@@ -26,13 +26,13 @@ struct StaggeredGrid<Content: View, T: Hashable>: View {
     
     init(columns: Int,
          spacing: CGFloat,
-         list: [T],
+         list: Binding<[T]> ,
          isLazy: Bool,
          @ViewBuilder content: @escaping (T) -> Content) {
 
         self.content = content
         self.spacing = spacing
-        self.list = list
+        self._list = list
         self.isLazy = isLazy
         self.columns = columns
     }

@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct Home_View_Header: View {
-    var body: some View {
+extension Home_View {
+
+    var Home_View_Header: some View {
         
         HStack(alignment: .top, spacing: 24){
             

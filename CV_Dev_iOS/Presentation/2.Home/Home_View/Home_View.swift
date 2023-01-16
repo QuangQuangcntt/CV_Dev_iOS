@@ -16,7 +16,7 @@ extension Home_View {
 
                 VStack(alignment: .center, spacing: 0){
 
-                    Home_View_Header()
+                    Home_View_Header
 
                     //MARK: - PERSONAL PROFILE
                     
@@ -55,7 +55,7 @@ extension Home_View {
                                 
                             }.padding(.all, 16).padding(.top, 24)
                             
-                            StaggeredGrid(columns: 3, spacing: 30, list: item.mainData, isLazy: false, content: { sub in
+                            StaggeredGrid(columns: 3, spacing: 30, list: .constant(item.mainData), isLazy: false, content: { sub in
                                 
                                 VStack(alignment: .center, spacing: 8){
                                     

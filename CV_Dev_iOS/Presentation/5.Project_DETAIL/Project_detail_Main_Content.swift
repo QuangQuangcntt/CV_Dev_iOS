@@ -47,7 +47,9 @@ struct Project_detail_Main_Content: View {
                 Spacer()
             }.padding(.all, 16)
             
-            StaggeredGrid(columns: 3, spacing: 0, list: project_detail.arrTech, isLazy: true, content: { sub in
+            StaggeredGrid(columns: 3, spacing: 0,
+                          list: .constant(project_detail.arrTech),
+                          isLazy: true, content: { sub in
                 
                 VStack(alignment: .center, spacing: 8){
                     

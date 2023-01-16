@@ -27,13 +27,13 @@ extension Contact_View {
         
         arrDataInfor.append(inforContact(title: "Social network", arrInfor_Data:
                                             [Infor(title: "Facebook",
-                                                   content: "https://www.facebook.com/quang.quang.098",
+                                                   content: "facebook.com/quang.quang.098",
                                                    type: .link),
                                              Infor(title: "Linkedin",
-                                                   content: "https://www.linkedin.com/in/quang-tran-cntt",
+                                                   content: "linkedin.com/in/quang-tran-cntt",
                                                    type: .link),
                                              Infor(title: "Github",
-                                                   content: "https://www.github.com/QuangQuangcntt",
+                                                   content: "github.com/QuangQuangcntt/CV_Dev_iOS",
                                                    type: .link)]
                                         ))
     }
@@ -53,9 +53,12 @@ extension Contact_View {
         else if type.type == .link{
             
             //avoid null
-            if type.content.contains("http") {
-                openURL(URL(string: type.content)!)
+           
+
+            if let URL_DATA = URL(string: "https://www.\(type.content)") {
+                openURL( URL_DATA)
             }
+            
         }
     }
 }

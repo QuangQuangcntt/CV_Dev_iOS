@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>UIAppFonts</key>
-    <array>
-        <string>Roboto-Medium.ttf</string>
-        <string>Roboto-Light.ttf</string>
-        <string>Roboto-Regular.ttf</string>
-        <string>Roboto-MediumItalic.ttf</string>
-        <string>Quantify.ttf</string>
-        <string>Roboto-LightItalic.ttf</string>
-        <string>Roboto-Italic.ttf</string>
-        <string>Roboto-Bold.ttf</string>
-    </array>
+	<array>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-MediumItalic.ttf</string>
+		<string>Quantify.ttf</string>
+		<string>Roboto-LightItalic.ttf</string>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+	</array>
 </dict>
 </plist>

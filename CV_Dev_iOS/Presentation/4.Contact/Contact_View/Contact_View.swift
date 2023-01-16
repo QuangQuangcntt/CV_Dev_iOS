@@ -65,7 +65,7 @@ extension Contact_View {
                         .font(.custom(Font().Title(), size: Font().Size24()))
                         .padding(.top, 16)
   
-                    //LANGUAGEA
+                    //LANGUAGE
                     HStack(alignment: .center){
                         
                         Spacer()
@@ -86,14 +86,14 @@ extension Contact_View {
                         .font(.custom(Font().Title(), size: Font().Size24()))
                         .padding(.top, 16)
                     
-                    Contact_View_TXT(txt: "contact_intro_content")
+                    Contact_View_TXT(txt: .constant("contact_intro_content") )
                         
-                    Contact_View_TXT(txt: "contact_List")
+                    Contact_View_TXT(txt: .constant("contact_List"))
                         .padding(.top, 8)
 
                         ForEach(Array(arrFeatures.enumerated()), id: \.offset) { item, columnsData in
 
-                            Contact_View_TXT_WithNumber(txt: columnsData, num: (item + 1))
+                            Contact_View_TXT_WithNumber(txt: .constant(columnsData), num: .constant(item + 1))
                                 .padding(.horizontal, 16)
                     }
                     

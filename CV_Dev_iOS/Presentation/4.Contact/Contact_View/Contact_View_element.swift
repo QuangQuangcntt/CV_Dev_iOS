@@ -33,11 +33,9 @@ struct Contact_Button: View {
 
 struct Contact_View_TXT: View {
             
-    var txt: String = ""
+    @Binding var txt: String
     
-    init(txt: String){
-        self.txt = txt
-    }
+
     var body: some View {
         
         let localizedKey = LocalizedStringKey.init("\(self.txt)")
@@ -53,14 +51,10 @@ struct Contact_View_TXT: View {
 
 struct Contact_View_TXT_WithNumber: View {
             
-    var txt: String = ""
+    @Binding var txt: String
     
-    var num: Int = 0
-    
-    init(txt: String, num: Int){
-        self.txt = txt
-        self.num = num
-    }
+    @Binding var num: Int
+
     var body: some View {
         
         HStack(alignment: .top, spacing: 0){
