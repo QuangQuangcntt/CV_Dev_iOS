@@ -18,9 +18,15 @@ struct Choose_Communicate: View {
     
     @Binding var isChat: Bool
     
-    @State var arrLiveChat: [phoneInfor] = [phoneInfor(name: "Zalo", icon: "https://i.imgur.com/VOov7m4.png", link: ""),
-                                            phoneInfor(name: "Messenger", icon: "https://i.imgur.com/nNCTPpU.png", link: ""),
-                                            phoneInfor(name: "Linkedin", icon: "https://i.imgur.com/27bzt0E.png", link: "")]
+    @State var arrLiveChat: [phoneInfor] = [phoneInfor(name: "Zalo",
+                                                       icon: "https://i.imgur.com/VOov7m4.png",
+                                                       link: "http://zalo.me/84918851529"),
+                                            phoneInfor(name: "Messenger",
+                                                       icon: "https://i.imgur.com/nNCTPpU.png",
+                                                       link: "https://www.facebook.com/quang.quang.098"),
+                                            phoneInfor(name: "Linkedin",
+                                                       icon: "https://i.imgur.com/27bzt0E.png",
+                                                       link: "https://www.linkedin.com/in/quang-tran-cntt")]
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
