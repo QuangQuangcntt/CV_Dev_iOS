@@ -39,8 +39,9 @@ extension Base_View {
                 swipe_gesture_UI()
             }
         }.background(Color(hex: 0xFCFAF7))
-        .navigationTitle("")
         .navigationBarHidden(true)
+        // using this for hide navigation bar and avoid error
+                                    //"NavigationLink presenting a value must appear inside a NavigationContent-based NavigationView. Link will be disabled."
         .ignoresSafeArea(.all, edges: .vertical)
     }
 }

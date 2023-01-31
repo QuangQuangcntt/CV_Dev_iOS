@@ -36,7 +36,7 @@ struct Project_Detail: View {
                     
             ZStack {
                 
-                ScrollView(.vertical) {
+                ScrollView(.vertical, showsIndicators: false) {
                   
                     Project_detail_Main_Content(project_detail: $project_detail)
                     .background(

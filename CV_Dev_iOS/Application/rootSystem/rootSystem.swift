@@ -15,7 +15,9 @@ struct CV_Quang_IOSApp: App {
             NavigationView {
                 Tabbar_View()
                    
-            }.environmentObject(AppState())
+            }.navigationViewStyle(.stack)// using this for hide navigation bar and avoid error
+            //"NavigationLink presenting a value must appear inside a NavigationContent-based NavigationView. Link will be disabled."
+            .environmentObject(AppState())
             .environmentObject(Monitor_Internet())
            
         }
